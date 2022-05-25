@@ -11,4 +11,10 @@
     <string name="nueva_venta">Nueva Venta</string>
     <string name="fecha">abril - mayo</string>
 
+    <string name="b_registrar">Registrar negocio</string>
+    <string name="b_login">Iniciar sesión</string>
+    <string name="registrar_tienda">Registrar tienda</string>
+    <string name="nombre_de_la_tienda">Nombre de la tienda</string>
+    <string name="logoSingUp">TODO</string>
+    <string name="flecha">flecha</string>
 </resources>
