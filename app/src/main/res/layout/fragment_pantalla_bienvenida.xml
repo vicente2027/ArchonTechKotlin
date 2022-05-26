@@ -17,7 +17,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/pantalla_registrar"
+        android:id="@+id/button_registrar"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/button_border"

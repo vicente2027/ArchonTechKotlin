@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDestinationChanged(@NonNull NavController controller,
                                              @NonNull NavDestination destination,  Bundle arguments) {
-                if(destination.getId() == R.id.pantallaBienvenida) {
+                if((destination.getId() == R.id.pantallaBienvenida) || (destination.getId() == R.id.pantalla_inicioSesion) || (destination.getId() == R.id.pantalla_registrarNegocio)) {
                     navView.setVisibility(View.GONE);
                 } else {
                     navView.setVisibility(View.VISIBLE);

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".pantalla_registrarNegocio">
+
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/toolbarr"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="324dp"
+            android:layout_height="165dp"
+
+
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:contentDescription="@string/logoSingUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2"
+            app:srcCompat="@drawable/logo_sign_up" />
+
+        <EditText
+            android:id="@+id/txt_plain1"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+
+            android:layout_marginTop="40dp"
+
+            android:autofillHints=""
+            android:background="@drawable/button_radiustext"
+            android:hint="@string/nombre_de_la_tienda"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+
+            android:textColorHint="#37474F"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txt_plain2"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/button_radiustext"
+            android:ems="10"
+            android:hint="Nombre(s) del dueño"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#37474F"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_plain1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txt_plain3"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/button_radiustext"
+            android:ems="10"
+            android:hint="Apellido paterno"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#37474F"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_plain2"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txt_plain6"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/button_radiustext"
+            android:ems="10"
+            android:hint="Apellido materno"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#37474F"
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_plain3"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txt_plain7"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/button_radiustext"
+            android:ems="10"
+            android:hint="Correo electrónico"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#37474F"
+
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_plain6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txt_plain8"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/button_radiustext"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+
+            android:textColorHint="#37474F"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_plain7"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button_registrar"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/button_radius"
+
+            android:text="Registrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_plain8"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

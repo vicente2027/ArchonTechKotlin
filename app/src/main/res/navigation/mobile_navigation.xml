@@ -37,4 +37,14 @@
         android:name="com.archontech.pantallaBienvenida"
         android:label="fragment_pantalla_bienvenida"
         tools:layout="@layout/fragment_pantalla_bienvenida" />
+    <fragment
+        android:id="@+id/pantalla_inicioSesion"
+        android:name="com.archontech.pantalla_inicioSesion"
+        android:label="fragment_pantalla_inicio_sesion"
+        tools:layout="@layout/fragment_pantalla_inicio_sesion" />
+    <fragment
+        android:id="@+id/pantalla_registrarNegocio"
+        android:name="com.archontech.pantalla_registrarNegocio"
+        android:label="fragment_pantalla_registrar_negocio"
+        tools:layout="@layout/fragment_pantalla_registrar_negocio" />
 </navigation>

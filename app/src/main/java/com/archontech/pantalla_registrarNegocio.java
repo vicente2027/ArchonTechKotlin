@@ -15,21 +15,23 @@ import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link pantallaBienvenida#newInstance} factory method to
+ * Use the {@link pantalla_registrarNegocio#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class pantallaBienvenida extends Fragment implements View.OnClickListener {
+public class pantalla_registrarNegocio extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    public NavController navController;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     Button btn1;
-    public pantallaBienvenida() {
+    public NavController navController;
+
+    public pantalla_registrarNegocio() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class pantallaBienvenida extends Fragment implements View.OnClickListener
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment pantallaBienvenida.
+     * @return A new instance of fragment pantalla_registrarNegocio.
      */
     // TODO: Rename and change types and number of parameters
-    public static pantallaBienvenida newInstance(String param1, String param2) {
-        pantallaBienvenida fragment = new pantallaBienvenida();
+    public static pantalla_registrarNegocio newInstance(String param1, String param2) {
+        pantalla_registrarNegocio fragment = new pantalla_registrarNegocio();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,7 +59,6 @@ public class pantallaBienvenida extends Fragment implements View.OnClickListener
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-
         }
     }
 
@@ -65,25 +66,19 @@ public class pantallaBienvenida extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pantalla_bienvenida, container, false);
+        return inflater.inflate(R.layout.fragment_pantalla_registrar_negocio, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
-        view.findViewById(R.id.button_login).setOnClickListener(this);
         view.findViewById(R.id.button_registrar).setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        if(v == v.findViewById(R.id.button_login)){
-            navController.navigate(R.id.pantalla_inicioSesion);
-
-        }else{
-            navController.navigate(R.id.pantalla_registrarNegocio);
-        }
+        navController.navigate(R.id.navigation_home);
     }
 }
