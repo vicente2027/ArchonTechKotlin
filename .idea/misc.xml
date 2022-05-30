@@ -3,14 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/drawable-v24/barra.xml" value="0.22" />
+        <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/drawable-v24/input.xml" value="0.22" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/drawable/button_border.xml" value="0.2185" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/activity_main.xml" value="0.2364179037174423" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_clientes_proveedores.xml" value="0.2364179037174423" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_dashboard.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_home.xml" value="0.35820894502642775" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_inventario.xml" value="0.2364179037174423" />
+        <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_modificar_producto.xml" value="0.21829710144927536" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_notifications.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_nueva_venta.xml" value="0.35820894502642775" />
+        <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_nuevo_producto.xml" value="0.21829710144927536" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_pantalla_bienvenida.xml" value="0.228125" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_pantalla_inicio_sesion.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/vicen/AndroidStudioProjects/ArchonTech/app/src/main/res/layout/fragment_pantalla_registrar_negocio.xml" value="0.21422101449275363" />

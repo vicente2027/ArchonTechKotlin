@@ -12,16 +12,10 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.archontech.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
         android:id="@+id/navigation_inventario"
-        android:name="com.archontech.ui.notifications.NotificationsFragment"
+        android:name="com.archontech.Inventario"
         android:label="@string/title_inventario"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_inventario" />
     <fragment
         android:id="@+id/navigation_clientesProveedores"
         android:name="com.archontech.ClientesProveedores"
@@ -47,4 +41,15 @@
         android:name="com.archontech.pantalla_registrarNegocio"
         android:label="fragment_pantalla_registrar_negocio"
         tools:layout="@layout/fragment_pantalla_registrar_negocio" />
+    <fragment
+        android:id="@+id/nuevoProducto"
+        android:name="com.archontech.nuevoProducto"
+        android:label="fragment_nuevo_producto"
+        tools:layout="@layout/fragment_nuevo_producto" />
+    <fragment
+        android:id="@+id/modificarProducto"
+        android:name="com.archontech.modificarProducto"
+        android:label="fragment_modificar_producto"
+        tools:layout="@layout/fragment_modificar_producto" />
+
 </navigation>
