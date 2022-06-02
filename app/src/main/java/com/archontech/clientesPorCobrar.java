@@ -14,10 +14,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ClientesProveedores#newInstance} factory method to
+ * Use the {@link clientesPorCobrar#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ClientesProveedores extends Fragment implements View.OnClickListener {
+public class clientesPorCobrar extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,9 +27,11 @@ public class ClientesProveedores extends Fragment implements View.OnClickListene
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
     public NavController navController;
 
-    public ClientesProveedores() {
+
+    public clientesPorCobrar() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class ClientesProveedores extends Fragment implements View.OnClickListene
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ClientesProveedores.
+     * @return A new instance of fragment clientesPorCobrar.
      */
     // TODO: Rename and change types and number of parameters
-    public static ClientesProveedores newInstance(String param1, String param2) {
-        ClientesProveedores fragment = new ClientesProveedores();
+    public static clientesPorCobrar newInstance(String param1, String param2) {
+        clientesPorCobrar fragment = new clientesPorCobrar();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,28 +66,29 @@ public class ClientesProveedores extends Fragment implements View.OnClickListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_clientes_proveedores, container, false);
+        return inflater.inflate(R.layout.fragment_clientes_por_cobrar, container, false);
     }
 
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
 
-        view.findViewById(R.id.clientes).setOnClickListener(this);
-        view.findViewById(R.id.proveedores).setOnClickListener(this);
+        view.findViewById(R.id.diluc).setOnClickListener(this);
+       // view.findViewById(R.id.btnNuevoProducto).setOnClickListener(this);
         //view.findViewById(R.id.button_registrar).setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        if(v == v.findViewById(R.id.clientes)) {
+        if(v == v.findViewById(R.id.diluc)) {
 
-            navController.navigate(R.id.clientesPorCobrar);
+            navController.navigate(R.id.clientesAdeudo);
         }
-        //if(v == v.findViewById(R.id.btnNuevoProducto)) {
+       // if(v == v.findViewById(R.id.btnNuevoProducto)) {
 
-           // navController.navigate(R.id.nuevoProducto);
+       //     navController.navigate(R.id.nuevoProducto);
         //}
     }
 }

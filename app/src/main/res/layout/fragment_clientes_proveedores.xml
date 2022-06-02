@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ClientesProveedores">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-
-        android:text="@string/hello_blank_fragment"
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/imageView4"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/ic_baseline_group_24" />
+
+        <Button
+            android:id="@+id/clientes"
+            android:layout_marginTop="60dp"
+            android:background="#00000000"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clientes" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_weight="1"
+        android:src="@drawable/proveedores" />
+
+    <Button
+        android:id="@+id/proveedores"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/black"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        />
+        android:layout_weight="1"
+        android:text="Proveedores" />
 
 </FrameLayout>

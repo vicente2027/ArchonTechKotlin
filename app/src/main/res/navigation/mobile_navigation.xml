@@ -51,5 +51,25 @@
         android:name="com.archontech.modificarProducto"
         android:label="fragment_modificar_producto"
         tools:layout="@layout/fragment_modificar_producto" />
+    <fragment
+        android:id="@+id/clientesPorCobrar"
+        android:name="com.archontech.clientesPorCobrar"
+        android:label="fragment_clientes_por_cobrar"
+        tools:layout="@layout/fragment_clientes_por_cobrar" />
+    <fragment
+        android:id="@+id/clientesAdeudo"
+        android:name="com.archontech.clientesAdeudo"
+        android:label="fragment_clientes_adeudo"
+        tools:layout="@layout/fragment_clientes_adeudo" />
+    <fragment
+        android:id="@+id/notificarAdeudo"
+        android:name="com.archontech.notificarAdeudo"
+        android:label="fragment_notificar_adeudo"
+        tools:layout="@layout/fragment_notificar_adeudo" />
+    <fragment
+        android:id="@+id/pagarAdeudo"
+        android:name="com.archontech.pagarAdeudo"
+        android:label="fragment_pagar_adeudo"
+        tools:layout="@layout/fragment_pagar_adeudo" />
 
 </navigation>
