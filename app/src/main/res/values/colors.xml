@@ -15,6 +15,8 @@
     <color name="boxtext">#B6B3B0</color>
     <color name="green">#bfea6a</color>
     <color name="red">#e86137</color>
+    <color name="amarillo">#CDDC39</color>
+
     <color name="gray">#dadada</color>
     <color name="BotonVerde">#08FF00</color>
 </resources>

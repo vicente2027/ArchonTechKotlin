@@ -71,5 +71,25 @@
         android:name="com.archontech.pagarAdeudo"
         android:label="fragment_pagar_adeudo"
         tools:layout="@layout/fragment_pagar_adeudo" />
+    <fragment
+        android:id="@+id/compraProveedor"
+        android:name="com.archontech.compraProveedor"
+        android:label="fragment_compra_proveedor"
+        tools:layout="@layout/fragment_compra_proveedor" />
+    <fragment
+        android:id="@+id/proveedores2"
+        android:name="com.archontech.Proveedores"
+        android:label="fragment_proveedores"
+        tools:layout="@layout/fragment_proveedores" />
+    <fragment
+        android:id="@+id/escanearProducto"
+        android:name="com.archontech.escanearProducto"
+        android:label="fragment_escanear_producto"
+        tools:layout="@layout/fragment_escanear_producto" />
+    <fragment
+        android:id="@+id/perfilDeUsuario"
+        android:name="com.archontech.perfilDeUsuario"
+        android:label="fragment_perfil_de_usuario"
+        tools:layout="@layout/fragment_perfil_de_usuario" />
 
 </navigation>

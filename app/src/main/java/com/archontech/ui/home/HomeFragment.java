@@ -22,7 +22,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     private FragmentHomeBinding binding;
     public NavController navController;
-
+    private Spinner spinnerVenta;
+    ArrayAdapter <String> adapter;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HomeViewModel homeViewModel =
@@ -46,23 +47,31 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
+       // spinnerVenta = (Spinner) view.findViewById(R.id.spinner2);
+       // String [] opciones = {"Seleccione una opción","Efectivo","Tarjeta","Fiado"};
+        //ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, opciones);
+        //spinnerVenta.setAdapter(adapter);
+        view.findViewById(R.id.btnNuevaVenta).setOnClickListener(this);
+        view.findViewById(R.id.btnCompraProveedor).setOnClickListener(this);
+        view.findViewById(R.id.juanPerez).setOnClickListener(this);
 
-
-        view.findViewById(R.id.botonNuevaVenta).setOnClickListener(this);
-       // view.findViewById(R.id.btnNuevoProducto).setOnClickListener(this);
         //view.findViewById(R.id.button_registrar).setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        if(v == v.findViewById(R.id.botonNuevaVenta)) {
+        if(v == v.findViewById(R.id.btnNuevaVenta)) {
 
             navController.navigate(R.id.nueva_venta);
         }
-        //if(v == v.findViewById(R.id.btnNuevoProducto)) {
+        if(v == v.findViewById(R.id.btnCompraProveedor)) {
 
-           // navController.navigate(R.id.nuevoProducto);
-       // }
+            navController.navigate(R.id.compraProveedor);
+        }
+        if(v == v.findViewById(R.id.juanPerez)) {
+
+            navController.navigate(R.id.perfilDeUsuario);
+        }
     }
 }

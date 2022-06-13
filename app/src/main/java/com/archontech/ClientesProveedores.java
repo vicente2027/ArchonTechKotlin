@@ -72,7 +72,7 @@ public class ClientesProveedores extends Fragment implements View.OnClickListene
         navController = Navigation.findNavController(view);
 
         view.findViewById(R.id.clientes).setOnClickListener(this);
-        view.findViewById(R.id.proveedores).setOnClickListener(this);
+        view.findViewById(R.id.btnProveedores).setOnClickListener(this);
         //view.findViewById(R.id.button_registrar).setOnClickListener(this);
 
     }
@@ -83,9 +83,9 @@ public class ClientesProveedores extends Fragment implements View.OnClickListene
 
             navController.navigate(R.id.clientesPorCobrar);
         }
-        //if(v == v.findViewById(R.id.btnNuevoProducto)) {
+        if(v == v.findViewById(R.id.btnProveedores)) {
 
-           // navController.navigate(R.id.nuevoProducto);
-        //}
+            navController.navigate(R.id.proveedores2);
+        }
     }
 }

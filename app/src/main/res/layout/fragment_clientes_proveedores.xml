@@ -42,7 +42,7 @@
         android:src="@drawable/proveedores" />
 
     <Button
-        android:id="@+id/proveedores"
+        android:id="@+id/btnProveedores"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="200dp"
         android:textColor="@color/black"
