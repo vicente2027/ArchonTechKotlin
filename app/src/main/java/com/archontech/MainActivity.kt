@@ -1,56 +1,62 @@
-package com.archontech;
+package com.archontech
 
-import android.os.Bundle;
-import android.view.View;
+import androidx.navigation.NavController
+import android.os.Bundle
+import com.archontech.clientesAdeudo
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.archontech.R
+import com.archontech.clientesPorCobrar
+import com.archontech.ClientesProveedores
+import com.archontech.compraProveedor
+import com.archontech.escanearProducto
+import com.archontech.Inventario
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.NavController.OnDestinationChangedListener
+import androidx.navigation.NavDestination
+import androidx.navigation.Navigation
+import com.archontech.modificarProducto
+import com.archontech.notificarAdeudo
+import com.archontech.nueva_venta
+import com.archontech.nuevoProducto
+import com.archontech.pagarAdeudo
+import com.archontech.pantalla_inicioSesion
+import com.archontech.pantalla_registrarNegocio
+import com.archontech.pantallaBienvenida
+import com.archontech.perfilDeUsuario
+import com.archontech.Proveedores
+import com.archontech.databinding.ActivityMainBinding
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.NavDestination;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.archontech.databinding.ActivityMainBinding;
-
-public class MainActivity extends AppCompatActivity {
-
-    private ActivityMainBinding binding;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        getSupportActionBar().hide();
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+class MainActivity : AppCompatActivity() {
+    private var binding: ActivityMainBinding? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
+        supportActionBar!!.hide()
+        val navView = findViewById<BottomNavigationView>(R.id.nav_view)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_inventario, R.id.navigation_clientesProveedores)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller,
-                                             @NonNull NavDestination destination,  Bundle arguments) {
-                if((destination.getId() == R.id.pantallaBienvenida) || (destination.getId() == R.id.pantalla_inicioSesion) || (destination.getId() == R.id.pantalla_registrarNegocio)) {
-                    navView.setVisibility(View.GONE);
-                } else {
-                    navView.setVisibility(View.VISIBLE);
-                }
+        val appBarConfiguration = AppBarConfiguration.Builder(
+            R.id.navigation_home,
+            R.id.navigation_dashboard,
+            R.id.navigation_inventario,
+            R.id.navigation_clientesProveedores
+        )
+            .build()
+        val navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main)
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
+        NavigationUI.setupWithNavController(binding!!.navView, navController)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            if (destination.id == R.id.pantallaBienvenida || destination.id == R.id.pantalla_inicioSesion || destination.id == R.id.pantalla_registrarNegocio) {
+                navView.visibility = View.GONE
+            } else {
+                navView.visibility = View.VISIBLE
             }
-        });
-
-
+        }
     }
-
-
-
 }

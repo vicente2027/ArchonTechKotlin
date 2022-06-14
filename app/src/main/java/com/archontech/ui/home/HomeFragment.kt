@@ -1,77 +1,70 @@
-package com.archontech.ui.home;
+package com.archontech.ui.home
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
+import androidx.navigation.NavController
+import android.widget.Spinner
+import android.widget.ArrayAdapter
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+import com.archontech.ui.home.HomeViewModel
+import androidx.lifecycle.ViewModelProvider
+import com.archontech.R
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.LiveData
+import androidx.navigation.Navigation
+import com.archontech.databinding.FragmentHomeBinding
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
+class HomeFragment : Fragment(), View.OnClickListener {
+    private var binding: FragmentHomeBinding? = null
+    var navController: NavController? = null
+    private val spinnerVenta: Spinner? = null
+    var adapter: ArrayAdapter<String>? = null
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
+        val homeViewModel = ViewModelProvider(this).get(
+            HomeViewModel::class.java
+        )
+        binding =
+            FragmentHomeBinding.inflate(inflater, container, false)
 
-import com.archontech.R;
-import com.archontech.databinding.FragmentHomeBinding;
-
-public class HomeFragment extends Fragment implements View.OnClickListener{
-
-    private FragmentHomeBinding binding;
-    public NavController navController;
-    private Spinner spinnerVenta;
-    ArrayAdapter <String> adapter;
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
-
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-       //final TextView textView = binding.textViewCliente;
+        //final TextView textView = binding.textViewCliente;
         //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        return binding!!.root
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        navController = Navigation.findNavController(view);
-       // spinnerVenta = (Spinner) view.findViewById(R.id.spinner2);
-       // String [] opciones = {"Seleccione una opción","Efectivo","Tarjeta","Fiado"};
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
+        // spinnerVenta = (Spinner) view.findViewById(R.id.spinner2);
+        // String [] opciones = {"Seleccione una opción","Efectivo","Tarjeta","Fiado"};
         //ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, opciones);
         //spinnerVenta.setAdapter(adapter);
-        view.findViewById(R.id.btnNuevaVenta).setOnClickListener(this);
-        view.findViewById(R.id.btnCompraProveedor).setOnClickListener(this);
-        view.findViewById(R.id.juanPerez).setOnClickListener(this);
+        view.findViewById<View>(R.id.btnNuevaVenta).setOnClickListener(this)
+        view.findViewById<View>(R.id.btnCompraProveedor).setOnClickListener(this)
+        view.findViewById<View>(R.id.juanPerez).setOnClickListener(this)
 
         //view.findViewById(R.id.button_registrar).setOnClickListener(this);
-
     }
 
-    @Override
-    public void onClick(View v) {
-        if(v == v.findViewById(R.id.btnNuevaVenta)) {
-
-            navController.navigate(R.id.nueva_venta);
+    override fun onClick(v: View) {
+        if (v === v.findViewById<View>(R.id.btnNuevaVenta)) {
+            navController!!.navigate(R.id.nueva_venta)
         }
-        if(v == v.findViewById(R.id.btnCompraProveedor)) {
-
-            navController.navigate(R.id.compraProveedor);
+        if (v === v.findViewById<View>(R.id.btnCompraProveedor)) {
+            navController!!.navigate(R.id.compraProveedor)
         }
-        if(v == v.findViewById(R.id.juanPerez)) {
-
-            navController.navigate(R.id.perfilDeUsuario);
+        if (v === v.findViewById<View>(R.id.juanPerez)) {
+            navController!!.navigate(R.id.perfilDeUsuario)
         }
     }
 }
