@@ -6,10 +6,7 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_baseline_bar_chart_24"
-        android:title="@string/title_dashboard" />
+
 
     <item
         android:id="@+id/navigation_inventario"
@@ -17,8 +14,8 @@
         android:title="@string/title_inventario" />
 
     <item
-        android:id="@+id/navigation_clientesProveedores"
+        android:id="@+id/clientesPorCobrar"
         android:icon="@drawable/ic_baseline_group_24"
-        android:title="@string/title_clienteProveedores" />
+        android:title="Clientes" />
 
 </menu>

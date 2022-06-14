@@ -50,7 +50,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         //ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, opciones);
         //spinnerVenta.setAdapter(adapter);
         view.findViewById<View>(R.id.btnNuevaVenta).setOnClickListener(this)
-        view.findViewById<View>(R.id.btnCompraProveedor).setOnClickListener(this)
+        //view.findViewById<View>(R.id.btnCompraProveedor).setOnClickListener(this)
         view.findViewById<View>(R.id.juanPerez).setOnClickListener(this)
 
         //view.findViewById(R.id.button_registrar).setOnClickListener(this);
@@ -60,9 +60,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
         if (v === v.findViewById<View>(R.id.btnNuevaVenta)) {
             navController!!.navigate(R.id.nueva_venta)
         }
-        if (v === v.findViewById<View>(R.id.btnCompraProveedor)) {
-            navController!!.navigate(R.id.compraProveedor)
-        }
+       // if (v === v.findViewById<View>(R.id.btnCompraProveedor)) {
+      //      navController!!.navigate(R.id.compraProveedor)
+      //  }
         if (v === v.findViewById<View>(R.id.juanPerez)) {
             navController!!.navigate(R.id.perfilDeUsuario)
         }
